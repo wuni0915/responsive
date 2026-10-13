@@ -1,0 +1,41 @@
+@import url("reset.css");
+
+html {
+    font-size: 10px;
+}
+/* rem은 html 폰트 크기를 따르니 반응형 할때는 rem하는게 좋다. 부모 폰트 사이즈만 변경하면 됨 */
+body {
+    background-color: aqua;
+}
+.box {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    min-width: 250px;
+}
+h1 {
+    /* display: none; */
+    font-size: 3.2rem;
+    /* font-size: 5vw; */
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+/* vw 써도 되는데 모바일에서 반응형으로 작아질때 최소 12px밑으로는 떨어지지 않게끔 하는게 좋다. */
+@media (max-width:768px){
+    h1 {
+        display: block;
+    }
+}
+@media (max-width : 390px){
+    .box {
+        border-radius: 50%;
+        /* overflow: hidden; */
+    }
+}

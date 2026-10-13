@@ -1,0 +1,78 @@
+@import url("reset.css");
+
+body {
+    background: url("../images/bg0.jpg") no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-size: 72px;
+}
+h2{
+    display: none;
+}
+h3{
+    display: none;
+}
+     h4 {
+        display: none;
+     }
+
+.box {
+    background-color: chartreuse;
+    height: 300px;
+    width: 80%;
+    max-width: 1000px;
+    min-width: 290px;
+    margin: auto;
+    /* max-width 1920은 절대 있으면 안됨 */
+}
+/* 반응형 */
+/* 너비가 1200px 일때 */
+@media (max-width : 1200px){
+    /* body {
+        background: url("../images/bg0.jpg");
+    } */
+     h1 {
+        font-size: 48px;
+        color: red;
+     }
+}
+
+/* 넓이가 1000px 일때 */
+@media (max-width : 1000px ) {
+    body{
+        background: url("../images/bg1.jpg");
+    }
+}
+/* 768px 태블릿*/
+@media (max-width : 768px) {
+    body {
+        background: url("../images/bg2.jpg");
+    }
+    /* h2 보이게 */
+h2 {
+    display: block;
+}
+}
+
+/* 390px */
+@media (max-width : 390px) {
+    body {
+        background: url("../images/bg3.jpg");
+    }
+    h3 {
+        display: block;
+    }
+    h2 {
+    display: none;
+}
+    h1 {
+        font-size: 24px;
+     }
+     h4 {
+        display: block;
+        background-color: aqua;
+        padding: 10px 5px;
+        border-radius: 10px;
+     }
+}

@@ -1,0 +1,49 @@
+@import url("reset.css");
+
+.container {
+    width: 90%;
+    /* 반응형 했을떄 좌우 여백이 있고 없고 이다. */
+    max-width: 700px;
+    min-width: 290px;
+    background-color: aqua;
+    padding: 3%;
+    margin: auto;
+    /* 패딩의 3%는 뭔 기준.......뷰포트인가 */
+}
+
+.card li {
+    display: flex;
+    gap: 2%;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: aliceblue;
+}
+.card li:last-child {
+    margin-bottom: 0;
+}
+/* 이미지 영역 */
+.img-box, .card-txt {
+    width: 50%;
+}
+
+@media (max-width:768px) {
+    .card-txt h3 {
+        font-size: 16px;
+    }
+    .card-txt p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px){
+    .card li {
+        flex-direction: column;
+    } 
+    .img-box, .card-txt {
+        width: 100%;
+    }
+
+    .card-txt {
+        padding: 2%;
+    }
+}

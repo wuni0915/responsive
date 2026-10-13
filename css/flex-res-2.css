@@ -1,0 +1,39 @@
+@import url(reset.css);
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    min-width: 290px;
+    background-color: antiquewhite;
+    margin: 50px auto;
+    padding: 3%;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    gap: 10px;
+}
+.card-list li {
+    width: calc((100% - 50px) / 6);
+    /* 갭이 부여되어서 갭이 부여된 만큼 튕겼다 카드 6개가 아닌 카드 5개만 된 이유 */
+    padding: 3%;
+    background-color: aqua;
+}
+
+@media (max-width : 768px){
+    .card-list li {
+        width: calc((100% - 30px) / 4);
+    } 
+}
+@media (max-width : 480px){
+    .card-list li {
+        width: calc((100% - 10px) / 2);
+    } 
+}
+@media (max-width : 390px){
+    .card-list li {
+        width: 100%;
+    } 
+}

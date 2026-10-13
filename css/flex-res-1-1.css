@@ -1,0 +1,45 @@
+@import url(reset.css);
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    /* min-width: 250px; */
+    /* min-width를 안하니까 글자가 같이 안작아졌음 왜지? 이걸 하니까 글자가 변형이 안되고 같이 작아지는데 250px은 보장해주니까인가?? */
+    background-color: aqua;
+    margin: auto;
+    padding: 3%;
+}
+
+ul li {
+    display: flex;
+    gap: 3%;
+    background-color: aliceblue;
+    align-items: center;
+}
+ul li:first-child {
+    margin-bottom: 2%;
+}
+
+.img-box, .card-txt {
+    width: 50%;
+}
+
+@media (max-width : 768px){
+    .card-txt h3 {
+        font-size: 16px;
+    }
+    .card-txt p {
+        font-size: 14px;
+    }
+}
+@media (max-width : 480px){
+    ul li {
+        flex-direction: column;
+    }
+    .img-box, .card-txt {
+        width: 100%;
+    }
+    .card-tex {
+        padding: 2%;
+    }
+}
